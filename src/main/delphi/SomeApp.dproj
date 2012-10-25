@@ -1,0 +1,113 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{FBCB43FB-8511-4301-A03B-C845D2FBDBC4}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>SomeApp.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_ExeOutput>..\..\..\target\build\</DCC_ExeOutput>
+			<DCC_DcuOutput>..\..\..\target\dcu\</DCC_DcuOutput>
+			<DCC_DcpOutput>..\..\..\target\dcu\</DCC_DcpOutput>
+			<DCC_ResourceOutput>..\..\..\target\dcu\</DCC_ResourceOutput>
+			<BRCC_OutputDir>..\..\..\target\dcu\</BRCC_OutputDir>
+			<DCC_UnitSearchPath>src\main\delphi\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_DependencyCheckOutputName>..\..\..\target\build\SomeApp.exe</DCC_DependencyCheckOutputName>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_K>false</DCC_K>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_UsePackage>vcl;rtl;vclx;vclimg;vclactnband;dbrtl;vcldb;vcldbx;bdertl;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;dxCoreRS14;cxLibraryRS14;dxGDIPlusRS14;dxThemeRS14;cxPageControlRS14;dxDockingRS14;cxEditorsRS14;cxDataRS14;cxPageControldxBarPopupMenuRS14;dxBarRS14;dxComnRS14;dxLayoutControlRS14;cxSchedulerRS14;cxExportRS14;cxSchedulerGridRS14;cxGridRS14;cxTreeListdxBarPopupMenuRS14;cxTreeListRS14;cxVerticalGridRS14;dxmdsRS14;dxSpellCheckerRS14;cxSpreadSheetRS14;cxBarEditItemRS14;dxBarExtDBItemsRS14;dxBarExtItemsRS14;dxBarDBNavRS14;dxRibbonRS14;dxTabbedMDIRS14;dxNavBarRS14;dcldxSkinsCoreRS14;dxSkinsCoreRS14;dxSkinscxPCPainterRS14;dxSkinscxSchedulerPainterRS14;dxSkinsdxBarPainterRS14;dxSkinsdxNavBarPainterRS14;dxSkinsdxRibbonPainterRS14;dxSkinBlackRS14;dxSkinBlueRS14;dxSkinCaramelRS14;dxSkinCoffeeRS14;dxSkinDarkRoomRS14;dxSkinDarkSideRS14;dxSkinFoggyRS14;dxSkinGlassOceansRS14;dxSkiniMaginaryRS14;dxSkinLilianRS14;dxSkinLiquidSkyRS14;dxSkinLondonLiquidSkyRS14;dxSkinMcSkinRS14;dxSkinMoneyTwinsRS14;dxSkinOffice2007BlackRS14;dxSkinOffice2007BlueRS14;dxSkinOffice2007GreenRS14;dxSkinOffice2007PinkRS14;dxSkinOffice2007SilverRS14;dxSkinOffice2010BlackRS14;dxSkinOffice2010BlueRS14;dxSkinOffice2010SilverRS14;dxSkinPumpkinRS14;dxSkinsdxDLPainterRS14;dxSkinSevenRS14;dxSkinSharpRS14;dxSkinSilverRS14;dxSkinSpringTimeRS14;dxSkinStardustRS14;dxSkinSummer2008RS14;dxSkinValentineRS14;dxSkinXmas2008BlueRS14;dxPSCoreRS14;dxPScxCommonRS14;dxPSLnksRS14;dxPScxExtCommonRS14;dxPSdxLCLnkRS14;dxPScxPivotGridLnkRS14;cxPivotGridRS14;dxPScxSchedulerLnkRS14;dxPScxSSLnkRS14;dxPScxTLLnkRS14;dxPScxVGridLnkRS14;dxPSTeeChartRS14;dxPSdxDBOCLnkRS14;dxPSdxOCLnkRS14;dxorgcRS14;dxdborRS14;dxPSdxDBTVLnkRS14;dxdbtrRS14;dxPSdxFCLnkRS14;dxFlowChartRS14;dxPScxGridLnkRS14;dxPsPrVwAdvRS14;dxPSPrVwRibbonRS14;dxPSDBTeeChartRS14;dxPScxPCProdRS14;cxPivotGridOLAPRS14;cxPivotGridChartRS14;dxtrmdRS14;advchartd2010;OmniThreadLibraryRuntime2010</DCC_UsePackage>
+			<DCC_E>false</DCC_E>
+			<DCC_F>false</DCC_F>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="SomeApp.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="uFrmMain.pas">
+				<Form>Form1</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">SomeApp.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

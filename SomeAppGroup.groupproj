@@ -1,0 +1,52 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{8428B186-360A-468C-863B-42C6A78FC4C6}</ProjectGuid>
+		</PropertyGroup>
+		<PropertyGroup>
+			<ProjectPath>src\main\delphi</ProjectPath>
+			<DUnitPath>src\test\delphi</DUnitPath>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="src\main\delphi\SomeApp.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="src\test\delphi\SomeAppTests.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="SomeApp">
+			<MSBuild Projects="src\main\delphi\SomeApp.dproj"/>
+		</Target>
+		<Target Name="SomeApp:Clean">
+			<MSBuild Targets="Clean" Projects="src\main\delphi\SomeApp.dproj"/>
+		</Target>
+		<Target Name="SomeApp:Make">
+			<MSBuild Targets="Make" Projects="src\main\delphi\SomeApp.dproj"/>
+		</Target>
+		<Target Name="SomeAppTests">
+			<MSBuild Projects="src\test\delphi\SomeAppTests.dproj"/>
+		</Target>
+		<Target Name="SomeAppTests:Clean">
+			<MSBuild Targets="Clean" Projects="src\test\delphi\SomeAppTests.dproj"/>
+		</Target>
+		<Target Name="SomeAppTests:Make">
+			<MSBuild Targets="Make" Projects="src\test\delphi\SomeAppTests.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="SomeApp;SomeAppTests"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="SomeApp:Clean;SomeAppTests:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="SomeApp:Make;SomeAppTests:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
