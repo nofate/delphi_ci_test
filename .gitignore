@@ -7,4 +7,4 @@ src/**/*/*.identcache
 src/**/__history/*
 src/**/*/*.drc
 src/**/*/*.map
-*.local
+*.local 
