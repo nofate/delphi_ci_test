@@ -1,0 +1,27 @@
+1 VERSIONINFO
+FILEVERSION 1,0,0,100000    // Версия файла
+PRODUCTVERSION 1,0,0,100000 // Версия продукта
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "041904E3"  // Блок с информацией на русском языке
+    BEGIN
+      VALUE "FileVersion", "1.0.0.100000\0"
+      VALUE "ProductVersion", "1.0.0.100000\0"
+      VALUE "InternalName", "Project1.exe\0"                     // Внутреннее имя
+      VALUE "OriginalFilename", "PROJECT1.EXE\0"                 // Оригинальное имя файла
+      VALUE "FileDescription", "Пример работы с ресурсами\0"     // Продукт
+      VALUE "ProductName", "Project1\0"
+      VALUE "CompanyName", "Decoding™\0"
+      VALUE "LegalCopyright", "©Decoding. Все права защищены.\0" // Авторское право
+      VALUE "LegalTrademarks", "Торговая марка\0"
+      VALUE "Comments", "Комментарий\0"
+      VALUE "CustomValue1", "Дополнительное значение 1\0"
+      VALUE "CustomValue2", "Дополнительное значение 2\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0419, 0x04E3
+  END
+END

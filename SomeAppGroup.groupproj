@@ -22,7 +22,7 @@
 			</BorlandProject>
 		</ProjectExtensions>
 		<Target Name="SomeApp">
-			<MSBuild Projects="src\main\delphi\SomeApp.dproj"/>
+			<MSBuild Targets="Build" Projects="src\main\delphi\SomeApp.dproj"/>
 		</Target>
 		<Target Name="SomeApp:Clean">
 			<MSBuild Targets="Clean" Projects="src\main\delphi\SomeApp.dproj"/>

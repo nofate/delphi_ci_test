@@ -2,11 +2,12 @@ program SomeApp;
 
 // SomeApp
 
+{$R 'ExeIcon.res' 'ExeIcon.RC'}
+{$R 'VersionInfo.res' 'VersionInfo.RC'}
+
 uses
   Forms,
   uFrmMain in 'uFrmMain.pas' {Form1};
-
-{$R *.res}
 
 begin
   Application.Initialize;
